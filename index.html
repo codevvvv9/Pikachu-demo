@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>纯CSS做一个 皮卡丘</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>皮卡丘</title>
   <style>
     *{margin: 0; padding: 0; box-sizing: border-box;}
     *::after{box-sizing: border-box;}
@@ -82,6 +83,61 @@
       left: 50%;
       margin-left: 116px;
     }
+    .upperLip{
+      height: 25px;
+      width: 80px;
+      border: 3px solid black;
+      position: absolute;
+      top: 50px;
+      background: #FFE600;
+    }
+    .upperLip.left{
+      right: 50%;
+      border-bottom-left-radius: 40px 25px;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-20deg);
+    }
+    .upperLip.right{
+      left: 50%;
+      border-bottom-right-radius: 40px 25px;
+      border-top: none;
+      border-left: none;
+      transform: rotate(20deg);
+    }
+    .lowerLip-wrapper{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -150px;
+      z-index: -1;
+      /* border: 1px solid red; */
+      height: 110px; 
+      width: 300px;
+      overflow: hidden;
+     
+    }
+    .lowerLip{
+      width: 300px;
+      height: 3500px;
+      background: #9B000A;
+      border-radius: 200px/2000px;
+      border: 2px solid black;
+      position: absolute;
+      bottom: 0;
+      overflow: hidden;
+    }
+    .lowerLip::after{
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      width: 100px;
+      height: 100px;
+      background: #FF485F;
+      left: 50%;
+      margin-left: -50px;
+      border-radius: 50%;
+    }
   </style>
 </head>
 <body>
@@ -91,6 +147,11 @@
     <div class="eye right"></div>
     <div class="face left"></div>
     <div class="face right"></div>
+    <div class="upperLip left"></div>
+    <div class="upperLip right"></div>
+    <div class="lowerLip-wrapper">
+      <div class="lowerLip"></div>
+    </div>
   </div>
 </body>
 </html>
