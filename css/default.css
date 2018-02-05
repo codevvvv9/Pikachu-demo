@@ -32,9 +32,10 @@ body{
     background: #ddd;
     padding: 4px;
     border: none;
+    border-radius: 6px;
 }
 .actions > button.active{
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 1);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 .actions>button:focus{
     outline: none;
